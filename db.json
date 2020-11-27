@@ -12,7 +12,7 @@
       ],
       "category_id": 1,
       "recomended": true,
-      "image":"\img_roll\Kaliforniya.jpg"
+      "image":"\\img_roll\\Kaliforniya.jpg"
     },
     {
        "url": "philadelphia_fresh",
