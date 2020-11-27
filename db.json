@@ -166,7 +166,7 @@
       ],
       "category_id": 3,
       "recomended": true,
-      "image":"\img_roll\Kaliforniya.jpg"
+      "image":"\\img_roll\\Kaliforniya.jpg"
     },
     {
       "url": "mikado_set",
