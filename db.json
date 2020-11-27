@@ -12,7 +12,7 @@
       ],
       "category_id": 1,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_roll\\Kaliforniya.jpg"
     },
     {
        "url": "philadelphia_fresh",
@@ -26,7 +26,7 @@
       ],
       "category_id": 1,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_roll\\fil_fresh.jpg"
     },
     {
       "url": "avocado",
@@ -40,7 +40,7 @@
       ],
       "category_id": 1,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_roll\\Avokado.jpg"
     },
     {
       "url": "eel",
@@ -54,7 +54,7 @@
       ],
       "category_id": 1,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_roll\\Unagi.jpg"
     },
     {
       "url": "mexican",
@@ -68,7 +68,7 @@
       ],
       "category_id": 1,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_roll\\mexican.jpg"
     },
     {
       "url": "warm_salmon",
@@ -82,7 +82,7 @@
       ],
       "category_id": 1,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_roll\\warm_salmon.jpg"
     },
     {
       "url": "hiyashi",
@@ -96,7 +96,7 @@
       ],
       "category_id": 2,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_sushi\\Hiyashi.jpg"
     },
     {
       "url": "tobiko",
@@ -110,7 +110,7 @@
       ],
       "category_id": 2,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_sushi\\Tobilo.jpg"
     },
     {
       "url": "kani",
@@ -124,7 +124,7 @@
       ],
       "category_id": 2,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_sushi\\Kani.jpg"
     },
     {
       "url": "unagi",
@@ -138,7 +138,7 @@
       ],
       "category_id": 2,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_sushi\\unagi.jpg"
     },
     {
       "url": "syake",
@@ -152,7 +152,7 @@
       ],
       "category_id": 2,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_sushi\\syake.jpg"
     },
     {
       "url": "satori_set",
@@ -166,7 +166,7 @@
       ],
       "category_id": 3,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_set\\satori_set.jpg"
     },
     {
       "url": "mikado_set",
@@ -180,7 +180,7 @@
       ],
       "category_id": 3,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_set\\mikado_set.jpg"
     },
     {
       "url": "lotus_set",
@@ -194,7 +194,7 @@
       ],
       "category_id": 3,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_set\\lotus_set.jpg"
     },
     {
       "url": "vegan_set",
@@ -208,7 +208,7 @@
       ],
       "category_id": 3,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_set\\vegan_set.jpg"
     },
     {
       "url": "ultimate_de_luxe",
@@ -222,7 +222,7 @@
       ],
       "category_id": 3,
       "recomended": true,
-      "pr_image":"\\img_roll\\Kaliforniya.jpg"
+      "pr_image":"img_set\\ultimate_de_luxe.jpg"
     }
   ],
   "promo": [
