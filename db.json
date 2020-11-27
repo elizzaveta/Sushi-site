@@ -11,7 +11,8 @@
         2
       ],
       "category_id": 1,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
        "url": "philadelphia_fresh",
@@ -24,7 +25,8 @@
         2
       ],
       "category_id": 1,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "avocado",
@@ -37,7 +39,8 @@
         2
       ],
       "category_id": 1,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "eel",
@@ -50,7 +53,8 @@
         2
       ],
       "category_id": 1,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "mexican",
@@ -63,7 +67,8 @@
         2
       ],
       "category_id": 1,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "warm_salmon",
@@ -76,7 +81,8 @@
         2
       ],
       "category_id": 1,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "hiyashi",
@@ -89,7 +95,8 @@
         4
       ],
       "category_id": 2,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "tobiko",
@@ -102,7 +109,8 @@
         4
       ],
       "category_id": 2,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "kani",
@@ -115,7 +123,8 @@
         4
       ],
       "category_id": 2,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "unagi",
@@ -128,7 +137,8 @@
         4
       ],
       "category_id": 2,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "syake",
@@ -141,7 +151,8 @@
         4
       ],
       "category_id": 2,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "satori_set",
@@ -154,7 +165,8 @@
         6
       ],
       "category_id": 3,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "mikado_set",
@@ -167,7 +179,8 @@
         6
       ],
       "category_id": 3,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "lotus_set",
@@ -180,7 +193,8 @@
         6
       ],
       "category_id": 3,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "vegan_set",
@@ -193,7 +207,8 @@
         6
       ],
       "category_id": 3,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     },
     {
       "url": "ultimate_de_luxe",
@@ -206,7 +221,8 @@
         6
       ],
       "category_id": 3,
-      "recomended": true
+      "recomended": true,
+      "image":"\img_roll\Kaliforniya.jpg"
     }
   ],
   "promo": [
