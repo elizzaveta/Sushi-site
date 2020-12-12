@@ -1,0 +1,26 @@
+
+.hidden_promo{
+    overflow: hidden;
+    height: 200px;
+}
+.promo_image{
+    height: 190px;
+
+}
+.mSyshi{
+    color: #e40e21;
+    margin-bottom: 5px;
+    font-size: 23px;
+}
+.headerElem{
+    margin-bottom: 5px;
+    font-size: 18px;
+
+}
+.stickyMenu{
+    margin-top: 65px;
+    height: 500px;
+}
+body{
+    padding-top: 68px;
+}
