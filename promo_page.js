@@ -30,7 +30,7 @@ export default function add_promo_on_page(promo){
         elem.className = "row";
 
         let left_part = document.createElement("div");
-        left_part.className = "col-4 hidden_promo"
+        left_part.className = "col-5 hidden_promo"
 
 
 
@@ -42,7 +42,7 @@ export default function add_promo_on_page(promo){
 
 
         let right_part = document.createElement("div");
-        right_part.className = "col-8"
+        right_part.className = "col-5"
 
         let name = document.createElement("p");
         name.textContent = promo[i].name;
