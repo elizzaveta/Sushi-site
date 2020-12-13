@@ -1,6 +1,8 @@
 import {change_prev_hash} from "./hash_change.js";
+import {button_add_to_cart} from "./cart.js";
 
 export default function add_product_details_page(id, products){
+    $('html,body').scrollTop(0);
     document.getElementById("clear").remove();
 
     let b = document.getElementById("insert_before_me");
@@ -44,6 +46,7 @@ export default function add_product_details_page(id, products){
     button_add.className = "btn btn-outline-success";
     button_add.textContent = "В корзину";
     right_part.appendChild(button_add);
+    button_add.onclick = function (){ button_add_to_cart(id)};
 
     product_element.appendChild(left_part);
     product_element.appendChild(right_part);

@@ -26,21 +26,22 @@
         <div id = "MySushi" class="col-2">
             <div class="row align-content-end align-self-end" >
                 <img src="logo.png" alt = "logo">
-                <p class="mSyshi align-self-end">My Sushi</p>
+                <p class="pointer mSyshi align-self-end">My Sushi</p>
 
             </div>
         </div>
         <div class="col-5 d-flex justify-content-between align-content-end">
             <div class = "row ">
-                <a id="a_catalog" class = "headerElem col text-dark align-self-end">Меню</a>
-                <a id="a_promo" class="headerElem col text-dark align-self-end" >Акции</a>
+                <a id="a_catalog" class = "pointer headerElem col text-dark align-self-end">Меню</a>
+                <a id="a_promo" class="pointer headerElem col text-dark align-self-end" >Акции</a>
                 <a class="headerElem col text-dark align-self-end" >Доставка</a>
                 <a class="headerElem col text-dark align-self-end" >Рестораны</a>
                 <a class="headerElem col text-dark align-self-end" >Отзывы</a>
             </div>
         </div>
         <div class="col-5 d-flex justify-content-end align-content-end">
-            <div class ="headerElem float-right text-dark align-self-end">Корзина</div>
+            <div id="cart" class = "pointer headerElem cart_numb float-right align-self-end">0</div>
+            <div id="cart2" class ="pointer headerElem float-right text-dark align-self-end">Корзина</div>
         </div>
     </div>
 
@@ -49,7 +50,28 @@
 <div id = "clear"></div>
 
 <footer class = "container-fluid bg-white p-3" id="insert_before_me">
-    Футер блин
+    <div class = "line"></div>
+
+    <div class = "m-st row justify-content-between ">
+        <div class = "col">
+            <a class = "pointer headerElem row text-dark align-self-end">Меню</a>
+            <a class="pointer headerElem row text-dark align-self-end" >Акции</a>
+            <a class="headerElem row text-dark align-self-end" >Доставка</a>
+        </div>
+        <div class = "col">
+            <a class="headerElem row text-dark align-self-end" >Поддержка</a>
+            <a class="headerElem row text-dark align-self-end" >Рестораны</a>
+            <a class="headerElem row text-dark align-self-end" >Отзывы</a>
+        </div>
+        <div class = "col">
+            <p class = "headerElem row text-dark align-self-end">Сети</p>
+            <a class="headerElem row text-dark align-self-end" >Instagram</a>
+            <a class="headerElem row text-dark align-self-end" >Twitter</a>
+            <a class="headerElem row text-dark align-self-end" >Telegram</a>
+            <a class="headerElem row text-dark align-self-end" >Viber</a>
+        </div>
+    </div>
+    <p style="text-align: center">© 2020 My Sushi</p>
 </footer>
 </body>
 </html>

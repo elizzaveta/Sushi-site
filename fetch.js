@@ -4,10 +4,18 @@ import add_category_on_page from "./category_page.js"
 import add_product_details_page from "./product_detail_page.js";
 import add_promo_on_page from "./promo_page.js";
 import {products_json,categories_json, promo_json, recommended_json} from "./fetch_data.js";
-
+import {display_cart_page} from "./cart_page.js";
 
 function main_page(){
     add_recommendations_on_page(recommended_json.json,products_json.json);
+    let ls_array = JSON.parse(localStorage.getItem("cart"));
+    if(ls_array !== null){
+        let numb = 0;
+        for(let i = 0; i<ls_array.length;i++){
+            numb+=Number(ls_array[i].count);
+        }
+        document.getElementById("cart").textContent = numb;
+    }
 }
 function display_products_data(){
     add_products_on_page( categories_json.json, products_json.json);
@@ -27,6 +35,8 @@ function load_first(){
     document.getElementById("a_catalog").onclick = function() {display_products_data()};
     document.getElementById("MySushi").onclick =  function() {main_page()};
     document.getElementById("a_promo").onclick = function() {display_promo_data()};
+    document.getElementById("cart").onclick = function() {display_cart_page(products_json.json)};
+    document.getElementById("cart2").onclick = function() {display_cart_page(products_json.json)};
 }
 
 load_first();

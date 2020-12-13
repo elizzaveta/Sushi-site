@@ -1,8 +1,10 @@
 import {display_category_data, display_product_detail_data} from "./fetch.js";
 import {change_prev_hash} from "./hash_change.js";
+import {button_add_to_cart} from "./cart.js";
 
 export default function add_products_on_page(categories, products){
     document.getElementById("clear").remove();
+    $('html,body').scrollTop(0);
 
     let b = document.getElementById("insert_before_me");
     let main = document.createElement("div");
@@ -40,7 +42,7 @@ export default function add_products_on_page(categories, products){
         right_part.appendChild(cat_block);
 
         let cat_name = document.createElement("h3");
-        cat_name.className = "shadow-none p-3 text-uppercase mb-5 bg-light rounded font-weight-lighter text-center";
+        cat_name.className = "pointer shadow-none p-3 text-uppercase mb-5 bg-light rounded font-weight-lighter text-center";
         cat_name.id = String(i);
         cat_name.onclick = function() {display_category_data(String(i+1))};
         cat_name.textContent = categories[i].name;
@@ -57,7 +59,7 @@ export default function add_products_on_page(categories, products){
         let cat_menu = document.createElement("div");
         cat_menu.textContent = categories[i].name;
         cat_menu.onclick = function() {display_category_data(String(i+1))};
-        cat_menu.className = "p-4";
+        cat_menu.className = "pointer p-4";
         menu.appendChild(cat_menu);
 
 
@@ -68,26 +70,32 @@ export default function add_products_on_page(categories, products){
 
         let pr_image = document.createElement("img");
         pr_image.src = String(products[i].pr_image);
-        pr_image.className = "w-75";
+        pr_image.className = "pointer w-75";//100?
+        pr_image.onclick = function() {display_product_detail_data(i)};
 
         let product_element = document.createElement("div");
         product_element.className = "col-3";
-        product_element.onclick = function() {display_product_detail_data(i)};
 
 
         let product_name = document.createElement("div");
-        product_name.className = "bg-info"
+        product_name.className = "pointer font-weight-light"
+        product_name.style.fontSize = "20px";
         product_name.textContent=products[i].product_name;
+        product_name.onclick = function() {display_product_detail_data(i)};
 
         product_element.appendChild(pr_image);
         product_element.appendChild(product_name);
 
+        let price = document.createElement("div");
+        price.textContent = products[i].price + " грн.";
+        product_element.appendChild(price);
 
         let button_add = document.createElement("button");
         button_add.type = "button";
         button_add.className = "btn btn-outline-success";
         button_add.textContent = "В корзину";
         product_element.appendChild(button_add);
+        button_add.onclick = function (){ button_add_to_cart(i)};
 
         parent_block.appendChild(product_element);
     }
