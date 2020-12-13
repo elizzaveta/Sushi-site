@@ -58,6 +58,13 @@ function button_remove_from_cart(idd){
     localStorage.setItem("cart",json);
 
     document.getElementById("elem_cart"+idd).remove();
+    if(result_array.length===0){
+        document.getElementById("make_order").remove();
+        let massage = document.createElement("h4");
+        massage.className = "font-weight-light text-center";
+        massage.textContent = "Вы ничего не добавили.";
+        document.getElementById("clear").appendChild(massage);
+    }
 
 
 }

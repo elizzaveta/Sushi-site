@@ -5,22 +5,7 @@ let categories_json;
 let promo_json;
 let recommended_json;
 
-class Categories{
-    constructor(data){
-        this.json = data;
-    }
-}
-class Products{
-    constructor(data){
-        this.json = data;
-    }
-}
-class Promo{
-    constructor(data){
-        this.json = data;
-    }
-}
-class Recommendations{
+class Data{
     constructor(data){
         this.json = data;
     }
@@ -31,7 +16,7 @@ function get_products(){
         .then(status)
         .then(json)
         .then(function(data) {
-            products_json = new Products(data);
+            products_json = new Data(data);
         })
         .then(function (){
         get_categories();
@@ -42,7 +27,7 @@ function get_categories(){
         .then(status)
         .then(json)
         .then(function(data) {
-            categories_json = new Categories(data);
+            categories_json = new Data(data);
         })
         .then(function (){
             get_promo();
@@ -53,7 +38,7 @@ function get_promo(){
         .then(status)
         .then(json)
         .then(function(data) {
-            promo_json = new Promo(data);
+            promo_json = new Data(data);
         })
         .then(function (){
             get_recommended();
@@ -65,7 +50,7 @@ function get_recommended(){
             .then(status)
             .then(json)
             .then(function(data) {
-                recommended_json = new Recommendations(data);
+                recommended_json = new Data(data);
             })
              .then(function (){
                  main_page();
@@ -85,47 +70,6 @@ function json(response) {
 
 get_products();
 
-
-
-
-
-
-
-
-//
-// function all(){
-//     get_categories();
-//     get_promo();
-//     get_recommended();
-//
-// }
-//
-// const promise1 =  new Promise(
-//     function(resolve, reject) {
-//
-//         all();
-//         resolve();
-//
-//     });
-//
-//
-// promise1.then(() => {
-//
-// });
-
-
-
-
-//     new Promise((resolve, reject) => {
-//
-//         alert("promise")
-//         get_products();
-//         get_categories();
-//         get_promo();
-//         get_recommended();
-//
-//     resolve();
-// });
 
 
 export {products_json, categories_json, promo_json, recommended_json};

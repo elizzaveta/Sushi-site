@@ -1,6 +1,7 @@
 
 import {change_prev_hash} from "./hash_change.js";
 import {button_remove_from_cart} from "./cart.js";
+import {display_order_page} from "./order_page.js";
 
 function display_cart_page(products){
 
@@ -9,13 +10,14 @@ function display_cart_page(products){
 
     let b = document.getElementById("insert_before_me");
     let main = document.createElement("div");
+    main.className = "bg-light";
     main.id = "clear";
-    main.style.paddingLeft = "45px";
-    main.style.paddingRight = "45px";
+    main.style.padding = "45px";
     insertAfter(b,main);
 
     let head = document.createElement("h2");
     head.textContent = "Корзина";
+    head.style.textAlign="center";
     head.className = "font-weight-light";
 
     main.appendChild(head);
@@ -27,10 +29,20 @@ function display_cart_page(products){
 
     if(get_cart_array !== null && get_cart_array.length!==0){
         display_cart_products(get_cart_array, products);
+
+        let order_button = document.createElement("button")
+        order_button.type = "button";
+        order_button.id = "make_order";
+        order_button.className = "btn btn-success btn-block";
+        order_button.textContent = "Оформить заказ";
+        order_button.onclick = function (){  display_order_page()  };
+        main.appendChild(order_button);
+
+
     }else{
         let massage = document.createElement("h4");
-        massage.className = "font-weight-light";
-        massage.textContent = "Корзина пока пуста. Здесь отобразятся продукты, которые вы добавите в нее.";
+        massage.className = "font-weight-light text-center";
+        massage.textContent = "Вы еще ничего не добавили.";
         main.appendChild(massage);
     }
 
@@ -46,17 +58,12 @@ function display_cart_products(prod_array, products){
         let elem = document.createElement("div");
         elem.className = "row bg-white";
         elem.id = "elem_cart"+prod_array[i].id;
-        elem.style.marginTop = "55px";
+        elem.style.margin = "35px";
 
 
         let left_part = document.createElement("div");
         left_part.className = "col-3";
 
-        let name = document.createElement("p");
-        name.className = "font-weight-light";
-        name.style.fontSize = "20px";
-        name.textContent = products[Number(prod_array[i].id)].product_name;
-        left_part.appendChild(name);
 
 
         let pr_image = document.createElement("img");
@@ -65,6 +72,12 @@ function display_cart_products(prod_array, products){
         left_part.appendChild(pr_image);
 
         let right_part = document.createElement("div");
+
+        let name = document.createElement("p");
+        name.className = "font-weight-light";
+        name.style.fontSize = "20px";
+        name.textContent = products[Number(prod_array[i].id)].product_name;
+        right_part.appendChild(name);
 
         let count = document.createElement("div");
         count.textContent = "Количество: "+prod_array[i].count;

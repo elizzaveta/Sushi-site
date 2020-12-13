@@ -1,25 +1,17 @@
 import {display_category_data, display_product_detail_data} from "./fetch.js";
 import {change_prev_hash} from "./hash_change.js";
 import add_promo_details_page from "./promo_detail_page.js";
-//import {promo_json} from "./fetch_data.js";
+import {clear_and_add_frame} from "./common_add_on_page.js";
 
 export default function add_promo_on_page(promo){
-    document.getElementById("clear").remove();
+    clear_and_add_frame(true);
 
-    let b = document.getElementById("insert_before_me");
-    let main = document.createElement("div");
-    main.id = "clear";
-    main.style.paddingLeft = "45px";
-    main.style.paddingRight = "45px";
-    main.className = "row";
-    insertAfter(b,main);
+    let main = document.getElementById("clear");
 
     let promo_grid = document.createElement("div");
     promo_grid.className = "col";
 
     main.appendChild(promo_grid);
-
-
 
     for(let i = 0; i< promo.length; i++){
 
@@ -65,6 +57,7 @@ export default function add_promo_on_page(promo){
     change_prev_hash("#promo");
     location.hash = "promo";
 }
+
 
 
 function insertAfter(referenceNode, newNode) {

@@ -14,12 +14,10 @@ export default function add_product_details_page(id, products){
 
     let product_element = document.createElement("div");
     product_element.className = "row bg-light";
+    product_element.style.padding = "30px";
 
     let left_part = document.createElement("div");
     left_part.className = "col-5"
-    let name = document.createElement("h3");
-    name.textContent = products[id].product_name;
-    left_part.appendChild(name);
 
     let pr_image = document.createElement("img");
     pr_image.src = String(products[id].pr_image);
@@ -28,6 +26,10 @@ export default function add_product_details_page(id, products){
 
     let right_part = document.createElement("div");
     right_part.className = "col-6"
+
+    let name = document.createElement("h3");
+    name.textContent = products[id].product_name;
+    right_part.appendChild(name);
 
     let weight = document.createElement("p");
     weight.textContent = "Вес: "+products[id].weight;
