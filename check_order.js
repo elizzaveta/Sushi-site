@@ -1,6 +1,49 @@
-import {button_remove_from_cart} from "./cart.js";
+import {button_remove_from_cart, count_cost} from "./cart.js";
 import {products_json} from "./fetch_data.js";
 import {grid_product_elem, clear_and_add_frame} from "./common_add_on_page.js";
+import {hide_loader,show_loader} from "./loader.js";
+
+function send_order(name, phone, email, adress, date){
+    clear_and_add_frame(false);
+    show_loader();
+
+    let order = {
+        name: name,
+        phone: phone,
+        email: email,
+        adress: adress,
+        date: date
+    }
+    post(order).then( data => {
+        console.log(data)
+    })
+        .catch((error) => {
+            console.log(error);
+        });
+
+
+    hide_loader();
+    display_order_details_page(name, phone, email, adress, date);
+}
+
+function post(order){
+    return fetch(`https://my-json-server.typicode.com/elizzaveta/Sushi-site/products`, {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(order)
+    }).then(response => {
+        if (!response.ok) {
+            throw Error(response.statusText);
+        }
+        return response.json()
+    })
+        .catch(error => {
+            console.log(error);
+        });
+}
 
 function display_order_details_page(name, phone, email, adress, date) {
     clear_and_add_frame(false);
@@ -8,7 +51,6 @@ function display_order_details_page(name, phone, email, adress, date) {
     let main = document.getElementById("clear");
 
     main.style.padding = "45px";
-
 
     let header = document.createElement("h2");
     header.textContent = "Ваш заказ:";
@@ -45,8 +87,11 @@ function display_order_details_page(name, phone, email, adress, date) {
 
     display_check_order_products();
 
-
-
+    let sum = document.createElement("p");
+    sum.id = "sum";
+    sum.textContent = "Стоимость заказа: "+count_cost(products_json.json)+" грн.";
+    sum.className = "lead";
+    main.appendChild(sum);
 
 
 }
@@ -65,8 +110,9 @@ function display_check_order_products(){
 
         main.appendChild(elem);
     }
+
 }
 
 
 
-export {display_order_details_page};
+export {send_order};

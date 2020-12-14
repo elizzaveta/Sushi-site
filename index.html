@@ -10,7 +10,6 @@
 <!--    <script src="fetch_info.js" type="module"></script>-->
 
     <script src="fetch.js" type="module"></script>
-    <script src="script.js"></script>
 <!--    <script src="file2.js" type="module"></script>-->
 <!--    <script src="file1.js" type="module"></script>-->
     <script src="hash_change.js" type="module"></script>
@@ -21,37 +20,51 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <div  class="container-fluid row  bg-white align-content-end fixed-top">
-        <div id = "MySushi" class="col-2">
+<header class="v_header " id="v_header">
+    <div  class="navbar navbar-expand-lg row navbar-light bg-white align-content-end fixed-top">
+        <div id = "MySushi" class="navbar-brand col-2">
             <div class="row align-content-end align-self-end" >
                 <img src="logo.png" alt = "logo">
                 <p class="pointer mSyshi align-self-end">My Sushi</p>
 
             </div>
         </div>
-        <div class="col-5 d-flex justify-content-between align-content-end">
-            <div class = "row ">
-                <a id="a_catalog" class = "pointer headerElem col text-dark align-self-end">Меню</a>
-                <a id="a_promo" class="pointer headerElem col text-dark align-self-end" >Акции</a>
-                <a class="headerElem col text-dark align-self-end" >Доставка</a>
-                <a class="headerElem col text-dark align-self-end" >Рестораны</a>
-                <a class="headerElem col text-dark align-self-end" >Отзывы</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a id="a_catalog" class="nav-link text-dark pointer">Меню <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a id="a_promo"  class="nav-link text-dark pointer">Акции</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled text-dark pointer">Отзывы</a>
+                </li>
+            </ul>
+
+            <div class="d-flex bucket">
+                <div id="cart" class = "pointer headerElem cart_numb float-right align-self-end">0</div>
+                <div id="cart2" class ="pointer headerElem float-right text-dark align-self-end">Корзина</div>
             </div>
-        </div>
-        <div class="col-5 d-flex justify-content-end align-content-end">
-            <div id="cart" class = "pointer headerElem cart_numb float-right align-self-end">0</div>
-            <div id="cart2" class ="pointer headerElem float-right text-dark align-self-end">Корзина</div>
+
         </div>
     </div>
 
 </header>
-<!--<div class="spinner-border text-info" role="status">-->
-<!--    <span class="sr-only">Loading...</span>-->
+<!--<div class = "m_slider">-->
+<!--    <img class = "m_slide" src = "img_promo/slider_promo.jpg" alt ="slider">-->
 <!--</div>-->
+
+<div id = "loader" style="position: fixed; top: 50%; left: 50%" class="spinner-border text-info" role="status">
+    <span class="sr-only">Loading...</span>
+</div>
 <div id = "clear"></div>
 
-<footer class = "container-fluid bg-white p-3" id="insert_before_me">
+<footer class = "v_footer container-fluid bg-white p-3" id="insert_before_me">
     <div class = "line"></div>
 
     <div class = "m-st row justify-content-between ">

@@ -5,8 +5,10 @@ import add_product_details_page from "./product_detail_page.js";
 import add_promo_on_page from "./promo_page.js";
 import {products_json,categories_json, promo_json, recommended_json} from "./fetch_data.js";
 import {display_cart_page} from "./cart_page.js";
+import {hide_loader} from "./loader.js";
 
 function main_page(){
+    hide_loader();
     add_recommendations_on_page(recommended_json.json,products_json.json);
     let ls_array = JSON.parse(localStorage.getItem("cart"));
     if(ls_array !== null){
@@ -37,9 +39,12 @@ function load_first(){
     document.getElementById("a_promo").onclick = function() {display_promo_data()};
     document.getElementById("cart").onclick = function() {display_cart_page(products_json.json)};
     document.getElementById("cart2").onclick = function() {display_cart_page(products_json.json)};
+
 }
 
 load_first();
 
-export {display_category_data, display_product_detail_data, main_page};
+
+
+export {display_category_data, display_product_detail_data, main_page, display_promo_data};
 

@@ -1,17 +1,11 @@
 import {change_prev_hash} from "./hash_change.js";
-import {display_order_details_page} from "./check_order.js";
+import {send_order} from "./check_order.js";
+import {clear_and_add_frame} from "./common_add_on_page.js";
 
 function display_order_page(){
-    document.getElementById("clear").remove();
-    $('html,body').scrollTop(0);
+    clear_and_add_frame(false);
 
-    let b = document.getElementById("insert_before_me");
-    let main = document.createElement("div");
-    main.className = "bg-light col";
-    main.id = "clear";
-    main.style.padding = "45px";
-    insertAfter(b,main);
-
+    let main = document.getElementById("clear");
 
     let form_name = document.createElement("form");
     form_name.className = "forms form-group row-5";
@@ -78,17 +72,15 @@ function display_order_page(){
     order_button.type = "submit";
     order_button.className = "btn btn-success btn-block";
     order_button.textContent = "Заказать";
-    order_button.onclick = function (){  display_order_details_page(input1.value, input2.value,input3.value,input4.value,input5.value)  };
+    order_button.onclick = function (){  send_order(input1.value, input2.value,input3.value,input4.value,input5.value)  };
     form_name.appendChild(order_button);
 
     main.appendChild(form_name);
 
-
+    change_prev_hash("#make_order");
+    location.hash = "make_order";
 
 }
 
-function insertAfter(referenceNode, newNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode);
-}
 
 export {display_order_page};

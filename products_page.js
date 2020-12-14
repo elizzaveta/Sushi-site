@@ -1,29 +1,16 @@
 import {display_category_data, display_product_detail_data} from "./fetch.js";
 import {change_prev_hash} from "./hash_change.js";
-import {button_add_to_cart} from "./cart.js";
-import {grid_product_elem, clear_and_add_frame} from "./common_add_on_page.js";
+import {grid_product_elem, clear_and_add_frame, add_menu} from "./common_add_on_page.js";
 
 export default function add_products_on_page(categories, products){
     clear_and_add_frame(true);
     let main = document.getElementById("clear");
+    main.className = "row"
 
-    let left_part = document.createElement("div");
-    left_part.className = "col-2"
-
-    let menu = document.createElement("div");
-    menu.className = "stickyMenu d-flex bg-light flex-column align-content-around sticky-top";
-    left_part.appendChild(menu);
-
-    let menu_name = document.createElement("div");
-    menu_name.style.marginTop = "50px";
-    menu_name.textContent = "Меню";
-    menu_name.className = "p-4";
-    menu.appendChild(menu_name);
+    add_menu(categories);
 
     let right_part = document.createElement("div");
-    right_part.className = "col-9"
-
-    main.appendChild(left_part);
+    right_part.className = "col-lg-9 col-md-9"
     main.appendChild(right_part);
 
     let cat_id_names = [];
@@ -45,12 +32,6 @@ export default function add_products_on_page(categories, products){
         cat_id_names.push("category"+(i+1));
 
         cat_block.appendChild(prod_grid);
-
-        let cat_menu = document.createElement("div");
-        cat_menu.textContent = categories[i].name;
-        cat_menu.onclick = function() {display_category_data(String(i+1))};
-        cat_menu.className = "pointer p-4";
-        menu.appendChild(cat_menu);
 
     }
     for(let i = 0; i<products.length; i++){

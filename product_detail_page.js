@@ -1,16 +1,11 @@
 import {change_prev_hash} from "./hash_change.js";
 import {button_add_to_cart} from "./cart.js";
+import {clear_and_add_frame} from "./common_add_on_page.js";
 
 export default function add_product_details_page(id, products){
-    $('html,body').scrollTop(0);
-    document.getElementById("clear").remove();
+    clear_and_add_frame(false);
 
-    let b = document.getElementById("insert_before_me");
-    let main = document.createElement("div");
-    main.id = "clear";
-    main.style.paddingLeft = "45px";
-    main.style.paddingRight = "45px";
-    insertAfter(b,main);
+    let main = document.getElementById("clear");
 
     let product_element = document.createElement("div");
     product_element.className = "row bg-light";
@@ -40,7 +35,7 @@ export default function add_product_details_page(id, products){
     right_part.appendChild(composition);
 
     let price = document.createElement("p");
-    price.textContent = "Цена: "+products[id].price;
+    price.textContent = "Цена: "+products[id].price+" грн.";
     right_part.appendChild(price);
 
     let button_add = document.createElement("button");
@@ -60,9 +55,5 @@ export default function add_product_details_page(id, products){
     location.hash = "products/"+products[id].url;
 }
 
-
-function insertAfter(referenceNode, newNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode);
-}
 
 export {add_product_details_page}
