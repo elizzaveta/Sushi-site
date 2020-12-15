@@ -7,17 +7,16 @@ function send_order(name, phone, email, adress, date){
     clear_and_add_frame(false);
     show_loader();
 
+
     let order = {
         name: name,
         phone: phone,
         email: email,
-        adress: adress,
-        date: date
+        address: adress,
+        date: date,
+        cart: localStorage.getItem("cart")
     }
-    post(order).then( data => {
-        console.log(data)
-    })
-        .catch((error) => {
+    post(order).catch((error) => {
             console.log(error);
         });
 
